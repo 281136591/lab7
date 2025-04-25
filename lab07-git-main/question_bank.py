@@ -8,15 +8,21 @@ import random
 # Simplified example with one category. Expand as needed.
 questions = {
     "Science": [
-        ("What is the chemical symbol for water?", "H2O"),
+        ("What is the chemical symbol for water?", "H2O")
+        ],
+    "Math" : [("what is 1 + 1","2"),("what is 2+2","4")],
+    "bands" : [("name one korean band whose name starts with a w","wave to earth")],
+    "fruits" : [("what fruit starts with a","apple")]
         # Add more questions as tuples (question, answer)
-    ],
+    
 }
 
 hints = {
     "Science": [
         # Pair each question with a corresponding hint.
+        "hint 1"
     ],
+    "Math" : ["hint 2 ","hint 2"]
     # Repeat for other categories as needed.
 }
 
@@ -34,6 +40,9 @@ def select_random_question(category):
     """
     #------------------------
     # Add your code here
+    C = questions[category]
+    return C
+    
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -53,6 +62,10 @@ def check_answer(player_answer, correct_answer):
     """
     #------------------------
     # Add your code here
+    pa = player_answer
+    ca = correct_answer
+    
+    return pa == ca
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -72,6 +85,10 @@ def remove_question(category, question):
     """
     #------------------------
     # Add your code here
+    for q in questions[category]:
+        if q[0] == question :
+             questions.remove(q)
+    
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -90,6 +107,12 @@ def display_question_and_accept_answer(question):
     """
     #------------------------
     # Add your code here
+    print(display)
+    
+    answer = input().strip()
+    
+    return answer
+        
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -109,6 +132,12 @@ def provide_hint(category, question):
     """
     #------------------------
     # Add your code here
+    i = 0
+    for q in questions[category]:
+        if q[0] == question
+    
+    for h in hint[category] :
+        
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -127,12 +156,11 @@ def display_correct_answer(correct_answer):
     """
     #------------------------
     # Add your code here
+    print(correct_answer)
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
 #---------------------------------------
-
-
 
 
